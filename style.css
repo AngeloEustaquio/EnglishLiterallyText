@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+body {
+  user-drag: none; /* For Chrome/Safari */
+  -webkit-user-drag: none; /* For Chrome/Safari */
+  -moz-user-drag: none; /* For Firefox */
+  -o-user-drag: none; /* For Opera */
+  user-select: none; /* Prevent selection */
+  background-color: #bf8b56;
+}
+@media only screen and (min-width: 360px) {
+  a {
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: relative;
+    color: black;
+    text-decoration: none;
+  }
+  .header {
+    background-color: #d09a63;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  aside {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+  }
+  ul {
+    display: flex;
+    gap: 10px;
+  }
+  li::marker {
+    content: "";
+  }
+  article {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2.2rem;
+  }
+  button {
+    cursor: ponter;
+    transition: background-color 100ms, transform 100ms;
+    width: 5rem;
+    height: 2.2rem;
+    background-color: #92683e;
+    border: none;
+    margin: 2rem 0 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation-name: btn;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  main {
+    margin: 10rem 0 0;
+    justify-items: center;
+    text-align: center;
+  }
+  .t::after {
+    content: "";
+    justify-self: center;
+    background-color: #8e6d4d;
+    width: 85%;
+    height: 2px;
+    display: block;
+  }
+  span {
+    font-weight: 800;
+    font-family: sans-serif;
+  }
+  .author {
+    font-size: 1.2rem;
+    position:fixed;
+    bottom:5px;
+    left:5px;
+  }
+  button:hover {
+    animation-play-state: paused;
+    transform: scale(1.55);
+    background-color: #9e7750;
+    color: white;
+  }
+  @keyframes btn {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .p {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-style: italic;
+    margin-top: clamp(2.5rem, 5vw, 3rem);
+    margin-right: clamp(0.5rem, 10vw, 10rem);
+    margin-bottom: clamp(2.5rem, 4vw, 2.5rem);
+    margin-left: clamp(0.5rem, 10vw, 10rem);
+    text-align: justify;
+    background-color: #92683e;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
